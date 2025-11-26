@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mesaj Uygulaması</title>
+</head>
+<body>
+    <h1>Mesaj Uygulaması</h1>
+
+    <form method="post">
+        <input type="text" name="message" placeholder="Mesajınızı yazın" required>
+        <button type="submit">Gönder</button>
+    </form>
+
+    <h2>Mesajlar:</h2>
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg }}</li>
+        {% else %}
+            <li>Henüz mesaj yok.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
